@@ -1,12 +1,11 @@
 /**
  * Created by snail on 2016/10/28.
  */
-import {combineReducers} from 'redux';
 
 import {ADD_USER,DELETE_USER,UPDATE_USER} from './userActions';
 
 
-const initialState =  [{name:2,age:2,sex:"man"}];
+const initialState =  {userList:[{id:"1111",name:"jack",age:2,sex:"man"}]};
 
 
 function addUser(state=[],action){
@@ -34,7 +33,7 @@ function updateUser(state=[],action){
     })
 }
 
-function userList (state=initialState,action){
+function userList (state=[],action){
     switch(action.type){
         case ADD_USER : return addUser(state,action);
         case DELETE_USER : return deleteUser(state,action);
@@ -43,8 +42,11 @@ function userList (state=initialState,action){
     }
 }
 
-const userReducer = combineReducers({
-    userList
-})
+function userReducer(state=[],action){
+    return {
+        userList:userList(state.userList,action)
+    }
+}
+
 
 export default userReducer;

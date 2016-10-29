@@ -3,12 +3,15 @@
  */
 
 import React,{Component,PropTypes} from 'react';
+import snailUtils from '../../common/snailUtils';
 
 export default  class AddUser extends Component{
     constructor(props){
         super(props);
     }
     handleClickAdd(){
+        let id = snailUtils.getRandomStr();
+
         const nameNode = this.refs.name;
         const name = nameNode.value.trim();
 
@@ -18,7 +21,7 @@ export default  class AddUser extends Component{
         const sexNode = this.refs.sex;
         const sex = sexNode.value.trim();
 
-        this.props.onAddClick({name,age,sex});
+        this.props.onAddClick({id,name,age,sex});
     }
     render(){
         return (

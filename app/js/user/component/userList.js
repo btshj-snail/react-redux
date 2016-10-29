@@ -8,17 +8,31 @@ export default class UserList extends Component{
     constructor(props){
         super(props);
     }
+    handleOnclickDeleteRow(id){
+        this.props.onClickDeleteRow(id);
+    }
+
 
     render(){
+        let userItems = this.props.userList.map(item=>{
+            return <UserItem onClickDelete={this.handleOnclickDeleteRow.bind(this)} key={item.id} id={item.id} name={item.name} age={parseInt(item.age)} sex={item.sex}/>
+        });
         return (
             <div>
-                <ul>
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>name</th>
+                        <th>age</th>
+                        <th>sex</th>
+                    </tr>
+
                     {
-                        this.props.userList.map(item=>{
-                            <UserItem name={item.name} age={item.age} sex={item.sex}/>
-                        })
+                        userItems
                     }
-                </ul>
+                    </tbody>
+
+                </table>
             </div>
         )
     }

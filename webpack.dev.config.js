@@ -9,9 +9,11 @@ const webpack = require("webpack");
 commonConfig.module.loaders.push({test: /\.css$/, loader: "style!css"});
 commonConfig.devtool = "source-map";
 commonConfig.entry.push('webpack-dev-server/client?http://localhost:3005/');
+commonConfig.entry.push('webpack/hot/only-dev-server');
 commonConfig.devServer = {
      contentBase: '',  //静态资源的目录 相对路径,相对于当前路径 默认为当前config所在的目录
-        devtool: 'source-map',
+        devtool: 'eval',
+    historyApiFallback: true,
         hot: true,        //自动刷新
         inline: true,
         port: 3005

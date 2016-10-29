@@ -14,6 +14,9 @@ import UserList from './component/userList'
     constructor(props){
         super(props);
     }
+     handleOnClickDeleteRow(id){
+         this.props.dispatch(deleteUser(id))
+     }
     render(){
         const {dispatch,userList} = this.props;
         return (
@@ -23,7 +26,8 @@ import UserList from './component/userList'
                     dispatch(addUser(user));
                 }}
             />
-                {userList!=null && userList.length==0?<UserList
+                {userList!=null && userList.length>0?<UserList
+                    onClickDeleteRow={this.handleOnClickDeleteRow.bind(this)}
                     userList = {userList}
                 />:null}
         </div>
