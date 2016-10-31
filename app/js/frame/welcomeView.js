@@ -14,7 +14,8 @@ export default class WelcomeView extends Component{
             <ul role="nav">
                 <li><Link to="/welcome" activeStyle={{color: 'red'}}>welcome</Link></li>
                 <li><Link to="/user" activeStyle={{color: 'red'}}>user</Link></li>
-                <li><Link to="/parentSub" activeStyle={{color: 'red'}}>user</Link></li>
+                <li><Link to="/parentSub" activeStyle={{color: 'red'}}>parentSub</Link></li>
+                <li><Link to="/textToFunction" activeStyle={{color: 'red'}}>textToFunction</Link></li>
             </ul>
         </div>)
     }
