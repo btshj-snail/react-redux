@@ -3,12 +3,14 @@
 背景颜色：#ececec
 块背景色：#fff
 线条：#eee
+#e9e9e9
 一级标题：18px
 二及标题：16px
 三级标题，正文：14px
 
 普通：#666
 高亮：#2db7f5
+线条颜色
 
 块间距 24px
 
@@ -37,6 +39,7 @@ a:active,a:hover{
 }
 
 .pageContainer{
+    overflow-y: auto;
     height:100vh;
     width:100vw;
     background: #ececec;
@@ -92,22 +95,163 @@ a:active,a:hover{
 }
 
 .main_wrapper{
-    position:relative;
     background:#fff;
     overflow: hidden;
-    width:92%;
+    zoom:1;
     margin:0px auto 24px auto;
     border-radius:6px;
     padding:24px 0px;
 }
-.main_wrapper .main_wrapper-left{
-    position:absolute;
+
+.main_wrapper .main_wrapper_left{
+    overflow: hidden;
+    border-right:solid 1px #e9e9e9;
+    margin-bottom:-10000px;
+    padding-bottom:10000px;
+   float:left;
     top:24px;
     left:0px;
-    width:200px;
+    width:199px;
     height:100%;
 }
-.main_wrapper .main_wrapper-right{
-    margin-left:200px;
+.main_wrapper .main_wrapper_right{
+    overflow: hidden;
+    margin-bottom:-10000px;
+    padding-bottom:10000px;
+    float:right;
     height:100%;
+    padding-left:24px;
 }
+.main_wrapper .main_wrapper_right:after{
+    content: "";
+    font-size:0px;
+    clear: both;
+}
+@media screen and (min-width: 800px){
+    .main_wrapper_media{
+        width:800px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:199px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:576px;
+    }
+}
+@media screen and (min-width: 900px){
+    .main_wrapper_media{
+        width:900px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:199px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:676px;
+    }
+}
+@media screen and (min-width: 1024px){
+    .main_wrapper_media{
+        width:1000px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:199px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:7760px;
+    }
+}
+@media screen and (min-width: 1279px) {
+    .main_wrapper_media{
+        width:1199px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:199px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:976px;
+    }
+}
+
+@media screen  and (min-width: 1459px) {
+    .main_wrapper_media{
+        width:1400px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:199px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:1176px;
+    }
+}
+
+@media screen and  (min-width: 1600px) {
+    .main_wrapper_media{
+        width:1600px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:200px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:1376px;
+    }
+}
+
+@media screen  and (min-width: 1919px) {
+    .main_wrapper_media{
+        width:1900px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:199px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:1676px;
+    }
+}
+
+@media screen  and (min-width: 2220px) {
+    .main_wrapper_media{
+        width:2200px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:199px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:1976px;
+    }
+}
+@media screen and (min-width: 2999px) {
+    .main_wrapper_media{
+        width:2900px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:199px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:2676px;
+    }
+}
+@media screen and (min-width: 3999px) {
+    .main_wrapper_media{
+        width:3900px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:199px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:3676px;
+    }
+}
+@media screen and (min-width: 4000px){
+    .main_wrapper_media{
+        width:4000px;
+    }
+    .main_wrapper_media .main_wrapper_left{
+        width:199px;
+    }
+    .main_wrapper_media .main_wrapper_right{
+        width:3776px;
+    }
+}
+
+
+
