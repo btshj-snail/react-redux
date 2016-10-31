@@ -5,6 +5,7 @@
 import React, { Component,PropTypes } from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, hashHistory,IndexRoute } from 'react-router';
+import ParentSub from '../parentSub/parentSubView'
 import UserView from '../user/userView'
 import WelcomeView from './welcomeView'
 import FrameView from './frameView'
@@ -19,6 +20,7 @@ class Root extends Component{
                         <IndexRoute component={WelcomeView} />
                         <Route path="/welcome" component={WelcomeView} />
                         <Route path="/user" component={UserView} />
+                        <Route path="/parentSub" component={ParentSub} />
                     </Route>
                 </Router>
             </Provider>
