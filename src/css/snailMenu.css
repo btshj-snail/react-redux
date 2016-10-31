@@ -1,0 +1,41 @@
+.snail_menu{
+    color:#666;
+    outline:none;
+    margin-bottom:0px;
+    line-style:none;
+}
+.snail_menu .snail_menu_item{
+    position:relative;
+    float:left;
+    border:solid 2px transparent;
+    top:-2px;
+}
+
+.snail_menu_item{
+    text-align: center;
+    cursor:pointer;
+    margin:0px;
+    padding:0px 20px;
+    display: block;
+    white-space: nowrap;
+    curosr:pointer;
+    transition: all 0.3s ease;
+}
+.snail_menu>.snail_menu_item_active,
+.snail_menu>.snail_menu_item:hover,
+.snail_menu>.snail_menu_item_selected{
+    border-bottom:solid 2px #2db7f5;
+    color:#2db7f5;
+}
+
+.snail_menu_item>a:active,.snail_menu_item>a:hover{
+    color:#2db7f5;
+}
+
+
+
+
+
+.snail_menu_vertical .snail_menu_item{
+    float:none;
+}

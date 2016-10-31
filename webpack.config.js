@@ -15,7 +15,7 @@ const commonConfig = {
         extensions:['','.js','json']
     },
     entry: [
-      './app/app.js' //单入口文件
+      './src/index.js' //单入口文件
     ],
     output: {
         publicPath:'/build',

@@ -1,0 +1,113 @@
+/*
+抽出共同部分，以实践sass或者less
+背景颜色：#ececec
+块背景色：#fff
+线条：#eee
+一级标题：18px
+二及标题：16px
+三级标题，正文：14px
+
+普通：#666
+高亮：#2db7f5
+
+块间距 24px
+
+*/
+
+body,html,h1,h2,h3,h4,h5,h6,p,ul,li,ol{
+    padding:0px;
+    margin:0px;
+}
+
+body{
+    font-size:14px;
+    font-family: '微软雅黑,Raleway,Hiragino Sans GB,sans-serif';
+    overflow-y: hidden;
+}
+a{
+    text-underline: none;
+}
+a:active,a:hover{
+    color:#2db7f5;
+    text-underline: none;
+}
+.root{
+    height:100vh;
+    width:100vw;
+}
+
+.pageContainer{
+    height:100vh;
+    width:100vw;
+    background: #ececec;
+}
+.pageHead{
+    position:relative;
+    height:80px;
+    margin-bottom:24px;
+    background:#fff;
+    border-bottom: solid 1px #eee;
+    padding:0px 4%;
+}
+
+.pageHead .siteInfo{
+    position:absolute;
+    top:0px;
+    left:4%;
+    width:220px;
+    height:80px;
+}
+.pageHead .siteInfo .siteInfo_logo{
+    height:40px;
+    width:40px;
+    margin:20px 20px 20px 0px;
+    transition: transform 1s;
+}
+.pageHead .siteInfo .siteInfo_siteName{
+    float:right;
+    height:80px;
+    line-height:90px;
+    font-size:18px;
+    color:#666;
+    text-transform: uppercase;
+}
+.pageHead .siteInfo .siteInfo_logo:hover{
+    transform: rotate(360deg);
+
+}
+
+.pageHead .siteToolbar{
+    margin-left:220px;
+    height:80px;
+}
+
+.pageHead .siteToolbar .site_nav{
+    height:80px;
+    float:right;
+}
+
+.pageHead .siteToolbar .site_nav li{
+    height:80px;
+    line-height:80px;
+}
+
+.main_wrapper{
+    position:relative;
+    background:#fff;
+    overflow: hidden;
+    width:92%;
+    margin:0px auto 24px auto;
+    border-radius:6px;
+    padding:24px 0px;
+}
+.main_wrapper .main_wrapper-left{
+    position:absolute;
+    top:24px;
+    left:0px;
+    width:200px;
+    height:100%;
+}
+.main_wrapper .main_wrapper-right{
+    margin-left:200px;
+    height:100%;
+}
