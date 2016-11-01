@@ -377,3 +377,35 @@
         transform: scale(0, 0);
     }
 }
+.rc-menu-inline .rc-menu-item-selected {
+    border-right: solid 2px #2db7f5;
+    color:#2db7f5;
+}
+
+.rc-menu-inline .rc-menu-submenu-title{
+    position:relative;
+}
+
+
+
+.rc-menu-inline .rc-menu-submenu-title:after{
+    transform:rotate(180deg) scale(.75);
+    filter:none;
+    font-size:12px;
+    top:15px;
+    display: inline-block;
+    zoom:1;
+    vertical-align:baseline;
+    text-align: center;
+
+    text-transform:none;
+    text-rendering: auto;
+    position:absolute;
+    transition: transform 0.3s ease;
+    font-family: "iconfont";
+    content: '\E61D';
+    right:16px;
+}
+.rc-menu-inline .rc-menu-submenu-title[aria-open="true"]:after{
+    transform: rotate(0deg) scale(.75);
+}

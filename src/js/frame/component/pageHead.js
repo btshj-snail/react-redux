@@ -11,7 +11,7 @@ export default class PageHead extends Component{
     }
     render(){
         return (
-            <div className="pageHead">
+            <div id="pageHead" className="pageHead">
                 <div className="siteInfo">
                     <img className="siteInfo_logo" src={require('../../../imgs/logo.png')}/>
                     <span className="siteInfo_siteName">the note of snail</span>

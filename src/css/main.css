@@ -23,8 +23,10 @@ body,html,h1,h2,h3,h4,h5,h6,p,ul,li,ol{
 
 body{
     font-size:14px;
-    font-family: '微软雅黑,Raleway,Hiragino Sans GB,sans-serif';
-    overflow-y: hidden;
+    font-family: 'Lato,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif';
+    overflow-y: auto;
+    overflow-x: hidden;
+
 }
 a{
     text-underline: none;
@@ -34,14 +36,14 @@ a:active,a:hover{
     text-underline: none;
 }
 .root{
-    height:100vh;
-    width:100vw;
+    height:100%;
+    width:100%;
 }
 
 .pageContainer{
-    overflow-y: auto;
-    height:100vh;
-    width:100vw;
+    overflow-y: hidden;
+    height:100%;
+    width:100%;
     background: #ececec;
 }
 .pageHead{
@@ -95,12 +97,13 @@ a:active,a:hover{
 }
 
 .main_wrapper{
+
     background:#fff;
     overflow: hidden;
     zoom:1;
     margin:0px auto 24px auto;
     border-radius:6px;
-    padding:24px 0px;
+    padding:24px 0px 0px 0px;
 }
 
 .main_wrapper .main_wrapper_left{
@@ -109,8 +112,6 @@ a:active,a:hover{
     margin-bottom:-10000px;
     padding-bottom:10000px;
    float:left;
-    top:24px;
-    left:0px;
     width:199px;
     height:100%;
 }
@@ -157,7 +158,7 @@ a:active,a:hover{
         width:199px;
     }
     .main_wrapper_media .main_wrapper_right{
-        width:7760px;
+        width:760px;
     }
 }
 @media screen and (min-width: 1279px) {
@@ -252,6 +253,26 @@ a:active,a:hover{
         width:3776px;
     }
 }
+
+.page_footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;
+}
+.page_footer_no_absolute{
+    position:static;
+}
+.page_footer .page_footer_content{
+    padding:0px 24px;
+    line-height:50px;
+    height:50px;
+    color:#666;
+    font-size:14px;
+    background: #fff;
+}
+
+
 
 
 

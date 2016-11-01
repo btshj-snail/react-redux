@@ -10,6 +10,13 @@ const snailUtils = {
             strAry.push(ary[++count]);
         }
         return strAry.join("")+(hasTime?new Date().getTime():"");
+    },
+    addEvent(dom,name,fun=()=>{}){
+        if (window.attachEvent) {
+            dom.attachEvent(`on${name}`, fun);
+        } else {
+            dom.addEventListener(name, fun, false);
+        }
     }
 }
 

@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react';
 import PageHead from './component/pageHead';
+import PageFooter from './component/pageFooter';
 import Menu, { MenuItem, Divider, SubMenu, ItemGroup } from 'rc-menu';
 require('../../css/snailMenu.css')
 
@@ -16,7 +17,7 @@ export default class FrameView extends Component{
         return (
             <div className="pageContainer">
                 <PageHead/>
-                <div className="main_wrapper main_wrapper_media">
+                <div id="mainWrapper" className="main_wrapper main_wrapper_media">
                     <div className="main_wrapper_left">
                         <Menu mode="inline">
                             <SubMenu title="首页">
@@ -59,6 +60,7 @@ export default class FrameView extends Component{
                     </div>
 
                 </div>
+                <PageFooter></PageFooter>
             </div>
         )
     }

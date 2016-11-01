@@ -8,6 +8,7 @@ import {createStore} from 'redux';
 import userReducer from './js/user/userReducers'
 
 require("./css/main.css")
+require("./css/iconfont.css")
 
 let store = createStore(userReducer);
 let rootElement = document.getElementById('root');
