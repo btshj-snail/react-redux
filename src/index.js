@@ -5,12 +5,12 @@ import React,{Component} from 'react';
 import reactDOM from 'react-dom';
 import Root from './js/frame/root'
 import {createStore} from 'redux';
-import userReducer from './js/user/userReducers'
+import rootReducer from './rootReducer'
 
-require("./css/main.css")
+require("./css/main.less")
 require("./css/iconfont.css")
 
-let store = createStore(userReducer);
+let store = createStore(rootReducer);
 let rootElement = document.getElementById('root');
 
 reactDOM.render(

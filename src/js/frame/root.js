@@ -10,6 +10,15 @@ import TextToFunction from '../skillPoint/textToFunction'
 import UserView from '../user/userView'
 import WelcomeView from './welcomeView'
 import FrameView from './frameView'
+import NotDevelopView from './notDevelop';
+
+import ReactIntroduceView from '../modules/react/react-introduce';
+import ES6View from '../modules/es6/es6';
+import Css3View from '../modules/css3/css3';
+import JsSkillPointView from '../modules/js-skillPoint/js_skillPoint';
+import CssSkillPointView from '../modules/css-skillPoint/css_skillPoint';
+import IntroduceView from '../modules/siteIntroduce/introduce';
+
 
 
 class Root extends Component{
@@ -20,9 +29,13 @@ class Root extends Component{
                     <Route path="/" component={FrameView} >
                         <IndexRoute component={WelcomeView} />
                         <Route path="/welcome" component={WelcomeView} />
-                        <Route path="/user" component={UserView} />
-                        <Route path="/parentSub" component={ParentSub} />
-                        <Route path="/textToFunction" component={TextToFunction} />
+                        <Route path="/notDevelop" component={NotDevelopView} />
+                        <Route path="/siteIntroduce" component={IntroduceView} />
+                        <Route path="/react" component={ReactIntroduceView} />
+                        <Route path="/es6" component={ES6View} />
+                        <Route path="/css3" component={Css3View} />
+                        <Route path="/jsSkillPoint" component={JsSkillPointView} />
+                        <Route path="/cssSkillPoint" component={CssSkillPointView} />
                     </Route>
                 </Router>
             </Provider>

@@ -1,20 +1,4 @@
-/*
-抽出共同部分，以实践sass或者less
-背景颜色：#ececec
-块背景色：#fff
-线条：#eee
-#e9e9e9
-一级标题：18px
-二及标题：16px
-三级标题，正文：14px
-
-普通：#666
-高亮：#2db7f5
-线条颜色
-
-块间距 24px
-
-*/
+@import "global";
 
 body,html,h1,h2,h3,h4,h5,h6,p,ul,li,ol{
     padding:0px;
@@ -22,18 +6,20 @@ body,html,h1,h2,h3,h4,h5,h6,p,ul,li,ol{
 }
 
 body{
-    font-size:14px;
+    font-size:@font-size-content;
     font-family: 'Lato,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif';
     overflow-y: auto;
     overflow-x: hidden;
 
 }
-a{
-    text-underline: none;
+a,a:link,a:visited{
+    text-decoration: none !important;
+    color:@content-color;
 }
+
 a:active,a:hover{
-    color:#2db7f5;
-    text-underline: none;
+    color:@content-light-color;
+    text-decoration: none !important;
 }
 .root{
     height:100%;
@@ -44,14 +30,14 @@ a:active,a:hover{
     overflow-y: hidden;
     height:100%;
     width:100%;
-    background: #ececec;
+    background: @main-ground-color;
 }
 .pageHead{
     position:relative;
     height:80px;
     margin-bottom:24px;
-    background:#fff;
-    border-bottom: solid 1px #eee;
+    background:@block-ground-color;
+    border-bottom: solid 1px @border-color;
     padding:0px 4%;
 }
 
@@ -72,8 +58,8 @@ a:active,a:hover{
     float:right;
     height:80px;
     line-height:90px;
-    font-size:18px;
-    color:#666;
+    font-size:@font-size-title-1;
+    color:@content-color;
     text-transform: uppercase;
 }
 .pageHead .siteInfo .siteInfo_logo:hover{
@@ -98,7 +84,7 @@ a:active,a:hover{
 
 .main_wrapper{
 
-    background:#fff;
+    background:@block-ground-color;
     overflow: hidden;
     zoom:1;
     margin:0px auto 24px auto;
@@ -108,10 +94,10 @@ a:active,a:hover{
 
 .main_wrapper .main_wrapper_left{
     overflow: hidden;
-    border-right:solid 1px #e9e9e9;
+    border-right:solid 1px @border-color-1;
     margin-bottom:-10000px;
     padding-bottom:10000px;
-   float:left;
+    float:left;
     width:199px;
     height:100%;
 }
@@ -144,10 +130,10 @@ a:active,a:hover{
         width:900px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:199px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:676px;
+        width:900-(@frame-right-width)-(@frame-right-border-width)-(@spacing);
     }
 }
 @media screen and (min-width: 1024px){
@@ -155,102 +141,102 @@ a:active,a:hover{
         width:1000px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:199px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:760px;
+        width:1000-(@frame-right-width)-(@frame-right-border-width)-(@spacing);
     }
 }
 @media screen and (min-width: 1279px) {
     .main_wrapper_media{
-        width:1199px;
+        width:1099px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:199px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:976px;
+        width:1099-(@frame-right-width)-(@frame-right-border-width)-(@spacing);
     }
 }
 
 @media screen  and (min-width: 1459px) {
     .main_wrapper_media{
-        width:1400px;
+        width:1300px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:199px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:1176px;
+        width:1300-(@frame-right-width)-(@frame-right-border-width)-(@spacing);
     }
 }
 
 @media screen and  (min-width: 1600px) {
     .main_wrapper_media{
-        width:1600px;
+        width:1500px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:200px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:1376px;
+        width:1500-(@frame-right-width)-(@frame-right-border-width)-(@spacing);
     }
 }
 
 @media screen  and (min-width: 1919px) {
     .main_wrapper_media{
-        width:1900px;
+        width:1800px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:199px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:1676px;
+        width:1800-(@frame-right-width)-(@frame-right-border-width)-(@spacing);
     }
 }
 
 @media screen  and (min-width: 2220px) {
     .main_wrapper_media{
-        width:2200px;
+        width:2100px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:199px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:1976px;
+        width:2100-(@frame-right-width)-(@frame-right-border-width)-(@spacing);
     }
 }
 @media screen and (min-width: 2999px) {
     .main_wrapper_media{
-        width:2900px;
+        width:2800px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:199px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:2676px;
+        width:2800-(@frame-right-width)-(@frame-right-border-width)-(@spacing);
     }
 }
 @media screen and (min-width: 3999px) {
     .main_wrapper_media{
-        width:3900px;
+        width:3800px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:199px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:3676px;
+        width:3800-(@frame-right-width)-(@frame-right-border-width)-(@spacing);
     }
 }
 @media screen and (min-width: 4000px){
     .main_wrapper_media{
-        width:4000px;
+        width:3900px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:199px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:3776px;
+        width:3900-(@frame-right-width)-(@frame-right-border-width)-(@spacing);
     }
 }
 
@@ -267,9 +253,9 @@ a:active,a:hover{
     padding:0px 24px;
     line-height:50px;
     height:50px;
-    color:#666;
-    font-size:14px;
-    background: #fff;
+    color:@content-color;
+    font-size:@font-size-content;
+    background: @block-ground-color;
 }
 
 

@@ -1,5 +1,7 @@
+@import "global";
+
 .snail_menu{
-    color:#666;
+    color:@content-color;
     outline:none;
     margin-bottom:0px;
     line-style:none;
@@ -24,13 +26,19 @@
 .snail_menu>.snail_menu_item_active,
 .snail_menu>.snail_menu_item:hover,
 .snail_menu>.snail_menu_item_selected{
-    border-bottom:solid 2px #2db7f5;
-    color:#2db7f5;
+    border-bottom:solid 2px @border-light-color;
+    color:@content-light-color;
     cursor:pointer;
 }
 
+.snail_menu>.snail_menu_item_active>a,
+.snail_menu>.snail_menu_item:hover>a,
+.snail_menu>.snail_menu_item_selected>a{
+    color:@content-light-color;
+}
+
 .snail_menu_item>a:active,.snail_menu_item>a:hover{
-    color:#2db7f5;
+    color:@content-light-color;
 }
 
 
@@ -49,7 +57,7 @@
     padding-left: 0;
     list-style: none;
     z-index: 99999;
-    color: #666;
+    color: @content-color;
 }
 .rc-menu-hidden {
     display: none;
@@ -81,7 +89,7 @@
     transform: translateZ(0);
 }
 .rc-menu-submenu-selected {
-    background-color: #eaf8fe;
+    //background-color: #eaf8fe;
 }
 .rc-menu > li.rc-menu-submenu {
     padding: 0;
@@ -153,9 +161,9 @@
 }
 .rc-menu-horizontal > .rc-menu-submenu-active,
 .rc-menu-horizontal > .rc-menu-item-active {
-    border-bottom: 2px solid #2db7f5;
+    border-bottom: 2px solid @border-light-color;
     background-color: #F3F5F7;
-    color: #2baee9;
+    color: @content-color;
 }
 .rc-menu-horizontal:after {
     content: "\20";
@@ -184,8 +192,8 @@
 }
 .rc-menu-sub.rc-menu-inline > .rc-menu-item,
 .rc-menu-sub.rc-menu-inline > .rc-menu-submenu > .rc-menu-submenu-title {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-right: 0;
 }
 .rc-menu-open-slide-up-enter,
@@ -377,10 +385,18 @@
         transform: scale(0, 0);
     }
 }
-.rc-menu-inline .rc-menu-item-selected {
-    border-right: solid 2px #2db7f5;
-    color:#2db7f5;
+.rc-menu-inline .rc-menu-item >a{
+    display: inline-block;
+    width:100%;
 }
+.rc-menu-inline .rc-menu-item-selected {
+    border-right: solid 2px @border-light-color;
+    color:@content-light-color;
+}
+.rc-menu-inline .rc-menu-item-selected>a{
+    color:@content-light-color;
+}
+
 
 .rc-menu-inline .rc-menu-submenu-title{
     position:relative;

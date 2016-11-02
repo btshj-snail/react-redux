@@ -32,7 +32,8 @@ const commonConfig = {
             }},
             // {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css')},
             {test: /\.(jpg|png)$/, loader: "url?limit=8192"},
-            {test: /\.scss$/, loader: "style!css!sass"}
+            {test: /\.scss$/, loader: "style!css!sass"},
+            {test: /\.less$/, loader: "style!css!less"}
         ]
     },
     plugins: [
