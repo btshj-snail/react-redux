@@ -5,9 +5,11 @@
 import {combineReducers} from 'redux';
 import menu from './js/frame/data/menuReducer';
 import userReducer from './js/user/userReducers';
+import loadInfo from './js/frame/data/loadDataReducer';
 
 const rootReducer = combineReducers({
     menu:menu,
+    loadInfo:loadInfo,
     userList:userReducer
 })
 

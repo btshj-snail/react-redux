@@ -3,7 +3,11 @@
  */
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {setSelectedMenuId} from './data/menuAction'
+
+import snailUtils from '../common/snailUtils';
+
+import {setSelectedMenuId,setMenuList} from './data/menuAction'
+import {fetchJsonFile} from './data/loadDataAction'
 
 import PageHead from './component/pageHead';
 import PageFooter from './component/pageFooter';
@@ -17,6 +21,14 @@ import PageRightMenu from './component/pageRightMenu.js';
     }
      handleClickMenuItem(id,text){
          this.props.dispatch(setSelectedMenuId(id));
+     }
+
+     componentDidMount(){
+         let self = this;
+         let promise = this.props.dispatch(fetchJsonFile(snailUtils.basePath()+"/data/menuList.json"));
+         promise.then((json)=>{
+             self.dispatch(setMenuList(json));
+         })
      }
 
     render(){
@@ -36,7 +48,7 @@ import PageRightMenu from './component/pageRightMenu.js';
                     <div className="main_wrapper_left">
                         <PageRightMenu menuList={subMenuList} openkeys={subMenuOpenkeys}/>
                     </div>
-                    <div className="main_wrapper_right" style={{height:"900px"}}>
+                    <div className="main_wrapper_right">
                         {this.props.children}
                     </div>
 
