@@ -17,6 +17,7 @@ export default class PageFooter extends Component{
         let sHeight = document.documentElement.clientHeight;
         let headHeight = document.getElementById("pageHead").clientHeight;
         let contentHeight = document.getElementById("mainWrapper").clientHeight;
+        snailUtils.debug(`可見區域高度：${sHeight},頭部高度：${headHeight},內容高度：${contentHeight}`);
         let className = sHeight>(headHeight+contentHeight)?"page_footer":"page_footer page_footer_no_absolute";
         this.setState({className:className});
     }
@@ -29,11 +30,16 @@ export default class PageFooter extends Component{
                 self.choseClassName();
             },300)
         })
+
+
+
     }
     render(){
+        let systemInfo = this.props.systemInfo;
+        let version  = !!systemInfo && !!systemInfo.version ? systemInfo.version : "";
         return (
             <footer  className={this.state.className}>
-               <div className="page_footer_content"> © 2016 Snail Group ; Version：1.0.0 ; gitHub:https://github.com/btshj</div>
+               <div className="page_footer_content"> <span className="page_footer_content_text">© 2016 Snail Group </span> <span className="page_footer_content_text"> Version：{} </span><span className="page_footer_content_text page_footer_content_text_right"><a href="https://github.com/btshj"> gitHub:https://github.com/btshj </a></span></div>
             </footer>
         )
     }

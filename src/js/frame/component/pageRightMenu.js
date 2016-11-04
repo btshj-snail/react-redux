@@ -32,10 +32,12 @@ export default  class PageRightMenu extends Component {
     }
 
     componentWillReceiveProps(nextProps){
-
-        if(!snailUtils.isArrayEqual(nextProps.openkeys,this.props.openkeys) ){
-            this.setState({openkeys:!nextProps.openkeys?[]:Array.isArray(nextProps.openkeys)?nextProps.openkeys:[nextProps.openkeys]});
+        if(nextProps.openkeys!=null && Array.isArray(nextProps.openkeys)){
+            if(this.props.openkeys==null || !snailUtils.isArrayEqual(nextProps.openkeys,this.props.openkeys) ){
+                this.setState({openkeys:!nextProps.openkeys?[]:Array.isArray(nextProps.openkeys)?nextProps.openkeys:[nextProps.openkeys]});
+            }
         }
+
 
     }
 

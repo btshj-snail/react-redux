@@ -204,7 +204,7 @@ const snailUtils = {
     },
 
     fetchJsonFile(url){
-        return fetch(url,null,"GET");
+        return snailUtils.fetch(url,null,"GET");
     }
 
 }
