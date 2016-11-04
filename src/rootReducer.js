@@ -3,15 +3,16 @@
  */
 
 import {combineReducers} from 'redux';
-import menu from './js/frame/data/menuReducer';
+
 import userReducer from './js/user/userReducers';
-import loadInfo from './js/frame/data/loadDataReducer';
+import loadInfoReducer from './js/frame/data/loadDataReducer';
 import systemInfoReducer from './js/frame/data/systemInfoReducer';
+import menuReducer from './js/frame/data/menuReducer';
 
 const rootReducer = combineReducers({
-    menu:menu,
+    menu:menuReducer,
     systemInfo:systemInfoReducer,
-    loadInfo:loadInfo,
+    loadInfo:loadInfoReducer,
     userList:userReducer
 })
 

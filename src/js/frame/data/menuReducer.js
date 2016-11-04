@@ -26,11 +26,11 @@ function menuList(state=[],action){
     }
 }
 
-function menuListReducer(state={},action){
-   return menuList(state.menuList,action)
+function menuListReducer(state=[],action){
+   return menuList(state,action)
 }
-function selectedMenuIdRender(state={},action){
-    return selectedMenuId(state.selectedMenuId,action)
+function selectedMenuIdRender(state="",action){
+    return selectedMenuId(state,action)
 }
 function selectedMenuId(state="",action){
     switch(action.type){
@@ -40,8 +40,8 @@ function selectedMenuId(state="",action){
     }
 }
 
-const menu = combineReducers({
+const menuReducer = combineReducers({
     menuList:menuListReducer,
     selectedMenuId:selectedMenuIdRender,
 })
-export default menu;
+export default menuReducer;
