@@ -42,37 +42,27 @@ const snailUtils = {
             dom.addEventListener(name, fun, false);
         }
     },
-    writeLog(msg,type="log"){
+    writeLog(msg,type="log",...other){
         if (window.console) {
             if (!!sysConfig.loggerOutputType &&
                 Array.isArray(sysConfig.loggerOutputType)) {
                 if (sysConfig.loggerOutputType.indexOf(type) != -1) {
                     // console对象的上面5种方法，都可以使用printf风格的占位符。不过，占位符的种类比较少，只支持字符（%s）、整数（%d或%i）、浮点数（%f）和对象（%o）四种。
-                    let placeholder = "%s"
-                    if (typeof msg == "string") {
-                        placeholder = '%s'
-                    } else if (typeof msg == 'object') {
-                        placeholder = '%o'
-                    } else if (typeof msg == 'number' && msg.toString().indexOf('.') != -1) {
-                        placeholder = '%f'
-                    } else if (typeof msg == 'number' && msg.toString().indexOf('.') == -1) {
-                        placeholder = '%d'
-                    }
                     switch (type) {
                         case 'log' :
-                            console.log(placeholder, msg);
+                            console.log(msg,...other);
                             break;  //用于输出普通信息
                         case 'info' :
-                            console.info(placeholder, msg);
+                            console.info(msg,...other);
                             break; //用于输出提示性信息
                         case 'warn' :
-                            console.warn(placeholder, msg);
+                            console.warn(msg,...other);
                             break; //用于输出警示信息
                         case 'error' :
-                            console.error(placeholder, msg);
+                            console.error(msg,...other);
                             break; //用于输出错误信息
                         case 'debug' :
-                            console.debug(placeholder, msg);
+                            console.debug(msg,...other);
                             break; //用于输出调试信息
                     }
 
@@ -82,20 +72,20 @@ const snailUtils = {
             }
         }
     },
-    log(msg){
-        snailUtils.writeLog(msg);
+    log(msg,...other){
+        snailUtils.writeLog(msg,other);
     },
-    info(msg){
-        snailUtils.writeLog(msg,"info");
+    info(msg,...other){
+        snailUtils.writeLog(msg,"info",other);
     },
-    error(msg){
-        snailUtils.writeLog(msg,"error");
+    error(msg,...other){
+        snailUtils.writeLog(msg,"error",other);
     },
-    warn(msg){
-        snailUtils.writeLog(msg,"warn");
+    warn(msg,...other){
+        snailUtils.writeLog(msg,"warn",other);
     },
-    debug(msg){
-        snailUtils.writeLog(msg,"debug");
+    debug(msg,...other){
+        snailUtils.writeLog(msg,"debug",other);
     },
     /**
      * 判断两个数组是否相等。数组中的元素最好是值类型，如果是引用类型，那么必然不会相等

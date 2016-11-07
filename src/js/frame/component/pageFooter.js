@@ -36,10 +36,11 @@ export default class PageFooter extends Component{
     }
     render(){
         let systemInfo = this.props.systemInfo;
+        snailUtils.debug(systemInfo)
         let version  = !!systemInfo && !!systemInfo.version ? systemInfo.version : "";
         return (
             <footer  className={this.state.className}>
-               <div className="page_footer_content"> <span className="page_footer_content_text">© 2016 Snail Group </span> <span className="page_footer_content_text"> Version：{} </span><span className="page_footer_content_text page_footer_content_text_right"><a href="https://github.com/btshj"> gitHub:https://github.com/btshj </a></span></div>
+               <div className="page_footer_content"> <span className="page_footer_content_text">© 2016 Snail Group </span> <span className="page_footer_content_text"> Version：{version} </span><span className="page_footer_content_text page_footer_content_text_right"><a href="https://github.com/btshj"> gitHub:https://github.com/btshj </a></span></div>
             </footer>
         )
     }

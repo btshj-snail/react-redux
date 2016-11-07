@@ -33,7 +33,7 @@ import PageRightMenu from './component/pageRightMenu.js';
          }).then(()=>{
              return self.props.dispatch(fetchJsonFile(snailUtils.basePath()+"/package.json"));
          }).then((json)=>{
-             snailUtils.debug(json);
+             snailUtils.debug(`请求系统信息：%o`,json);
              self.props.dispatch(setSystemInfo(json));
          })
      }
