@@ -26,15 +26,16 @@ import PageRightMenu from './component/pageRightMenu.js';
 
      componentDidMount(){
          let self = this;
-         let promise = this.props.dispatch(fetchJsonFile(snailUtils.basePath()+"/data/menuList.json"));
+
+         let promise =  self.props.dispatch(fetchJsonFile(snailUtils.basePath()+"/package.json"));
          promise.then((json)=>{
-             snailUtils.debug(json.menuList);
-             self.props.dispatch(setMenuList(json.menuList));
-         }).then(()=>{
-             return self.props.dispatch(fetchJsonFile(snailUtils.basePath()+"/package.json"));
-         }).then((json)=>{
              snailUtils.debug(`请求系统信息：%o`,json);
              self.props.dispatch(setSystemInfo(json));
+         }).then(()=>{
+             return self.props.dispatch(fetchJsonFile(snailUtils.basePath()+"/data/menuList.json"));
+         }).then((json)=>{
+             snailUtils.debug(json.menuList);
+             self.props.dispatch(setMenuList(json.menuList));
          })
      }
 
