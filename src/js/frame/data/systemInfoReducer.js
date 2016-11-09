@@ -7,7 +7,7 @@ import {SET_SYSTEM_INFO} from './systemInfoAction'
 function systemInfoReducer(state={},action){
     switch(action.type){
         case SET_SYSTEM_INFO:
-          return  action.systemInfo;
+          return  Object.assign({},state,action.systemInfo);
         default : return state;
     }
 }

@@ -69,7 +69,9 @@ import PageRightMenu from './component/pageRightMenu.js';
 
 function select(state){
     return {
-        menu:state.menu
+        menu:state.menu,
+        systemInfo:state.systemInfo,
+        loadInfo:state.loading
     }
 }
 export default connect(select)(FrameView)
