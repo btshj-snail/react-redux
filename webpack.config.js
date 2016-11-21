@@ -26,7 +26,7 @@ const commonConfig = {
     module: {
         loaders: [
             {test: /\.js$/,
-                exclude:["/node_modules/"],
+                exclude:["/node_modules/","/third_component/"],
                 loader: "babel-loader",query: {
                 presets: ['react','es2015']
             }},

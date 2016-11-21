@@ -34,10 +34,11 @@ a:active,a:hover{
 .root{
     height:100%;
     width:100%;
+    overflow-y: hidden;
 }
 
 .pageContainer{
-    overflow-y: hidden;
+    overflow-y: auto;
     height:100%;
     width:100%;
 
@@ -102,6 +103,7 @@ a:active,a:hover{
     margin:0px auto 24px auto;
     border-radius:6px;
     padding:24px 0px 0px 0px;
+    position:relative;
 }
 
 .main_wrapper .main_wrapper_left{
@@ -113,9 +115,8 @@ a:active,a:hover{
 }
 .main_wrapper .main_wrapper_right{
     overflow: hidden;
-    margin-bottom:-10000px;
-    padding-bottom:10000px;
-    float:right;
+    margin:0px @spacing;
+    float:left;
     height:100%;
 }
 .main_wrapper .main_wrapper_right:after{
@@ -128,10 +129,10 @@ a:active,a:hover{
         width:800px;
     }
     .main_wrapper_media .main_wrapper_left{
-        width:199px;
+        width:(@frame-right-width)-(@frame-right-border-width);
     }
     .main_wrapper_media .main_wrapper_right{
-        width:576px;
+        width:800-(@frame-right-width)-(@frame-right-border-width)-(@spacing*2);
     }
 }
 @media screen and (min-width: 900px){

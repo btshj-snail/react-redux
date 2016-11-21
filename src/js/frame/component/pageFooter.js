@@ -13,10 +13,21 @@ export default class PageFooter extends Component{
         }
         this.timer = null
     }
+    getDomHeight(dom){
+       let height =  typeof dom.height =='string' && dom.height.indexOf("px")!=-1 ? Number(dom.height.replace("px","")):dom.height;
+        height +=  typeof dom.marginBottom =='string' && dom.marginBottom.indexOf("px")!=-1 ? Number(dom.marginBottom.replace("px","")):dom.marginBottom;
+        height +=  typeof dom.marginTop =='string' && dom.marginTop.indexOf("px")!=-1 ? Number(dom.marginTop.replace("px","")):dom.marginTop;
+        height +=  typeof dom.paddingTop =='string' && dom.paddingTop.indexOf("px")!=-1 ? Number(dom.paddingTop.replace("px","")):dom.paddingTop;
+        height +=  typeof dom.paddingBottom =='string' && dom.paddingBottom.indexOf("px")!=-1 ? Number(dom.paddingBottom.replace("px","")):dom.paddingBottom;
+return height;
+    }
     choseClassName(){
         let sHeight = document.documentElement.clientHeight;
-        let headHeight = document.getElementById("pageHead").clientHeight;
-        let contentHeight = document.getElementById("mainWrapper").clientHeight;
+
+        let headDom = document.getElementById("pageHead");
+        let headHeight = this.getDomHeight(headDom);
+        let contentDom = document.getElementById("mainWrapper");
+        let contentHeight = this.getDomHeight(contentDom);
         snailUtils.debug(`可見區域高度：${sHeight},頭部高度：${headHeight},內容高度：${contentHeight}`);
         let className = sHeight>(headHeight+contentHeight)?"page_footer":"page_footer page_footer_no_absolute";
         this.setState({className:className});
