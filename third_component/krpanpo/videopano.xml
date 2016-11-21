@@ -31,9 +31,9 @@
 
 		<!-- 定义视频源 -->
 		<action name="add_video_sources">
-			videointerface_addsource('超清', '%CURRENTXML%/record_changsha_2.3d.demo.mp4', '');
-			videointerface_addsource('高清', '%CURRENTXML%/record_changsha_2.3d.demo.mp4', '');
-			videointerface_addsource('流畅', '%CURRENTXML%/record_changsha_2.3d.demo.mp4', '');
+			videointerface_addsource('超清', '%CURRENTXML%/3.mp4', '');
+			videointerface_addsource('高清', '%CURRENTXML%/3.mp4', '');
+			videointerface_addsource('流畅', '%CURRENTXML%/3.mp4', '');
 			
 			videointerface_play('高清');
 		</action>
