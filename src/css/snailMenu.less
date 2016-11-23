@@ -23,6 +23,9 @@
     curosr:pointer;
     transition: all 0.3s ease;
 }
+.snail_menu_item a{
+    color:@content-color;
+}
 .snail_menu>.snail_menu_item_active,
 .snail_menu>.snail_menu_item:hover,
 .snail_menu>.snail_menu_item_selected{
@@ -116,6 +119,7 @@
     padding: 7px 7px 7px 16px;
     white-space: nowrap;
 }
+
 .rc-menu-item.rc-menu-item-disabled,
 .rc-menu-submenu-title.rc-menu-item-disabled,
 .rc-menu-item.rc-menu-submenu-disabled,
@@ -235,6 +239,9 @@
     animation-name: rcMenuOpenSlideUpOut;
     -webkit-animation-play-state: running;
     animation-play-state: running;
+}
+.rc-menu-inline .rc-menu-item>a{
+    color:@content-color;
 }
 @-webkit-keyframes rcMenuOpenSlideUpIn {
     0% {
