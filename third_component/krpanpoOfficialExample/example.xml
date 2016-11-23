@@ -7,7 +7,7 @@
 
 	<plugin name="video"
 			url="videoplayer_basic_source.js"
-			videourl="video.mp4"
+			videourl="wow.mp4"
 			devices="panovideosupport"
 			/>
 			
