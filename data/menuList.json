@@ -101,6 +101,12 @@
           "items": []
         },
         {
+          "id": "5-4",
+          "text": "krpano官方案列",
+          "path": "/krpanoOfficialExample",
+          "items": []
+        },
+        {
           "id": "5-2",
           "text": "对象",
           "path": "/notDevelop",
