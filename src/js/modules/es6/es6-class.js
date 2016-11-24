@@ -3,47 +3,15 @@
  */
 
 import React,{Component} from 'react';
+import Highlight from 'react-highlight';
+
 
 export default class Es6ClassView extends Component{
     constructor(props){
         super(props);
     }
     componentDidMount(){
-        let codeDom = document.getElementById('oldCreateObjectCode');
-        if(!!codeDom){
-            codeDom.innerText = 'function Circle(radius){<br>'+
-                'this.radius = radius;'+
-            'Circle.circlesMade++;'+
-            '}'+
 
-            '//es5的新方法'+
-            'Object.defineProperty(Circle,"circlesMade",{'+
-            'get:function(){'+
-            '    return this._count?this._count:0;'+
-            '},'+
-            'set:function(count){'+
-            '    this._count = count;'+
-            '}'+
-            '})'+
-
-            'Circle.prototype = {'+
-            '    square:function(){'+
-            '        .....'+
-            '   }'+
-            '}'+
-
-            'Object.defineProperty(Circle.prototype,\'radius\',{'+
-            '    get:function(){'+
-                '    return this._radisu;'+
-            '    },'+
-            '    set:function(val){'+
-            '        if(!Number.isInteger(val)){'+
-            '            throw Error (`半径只能为整数`)'+
-            '        }'+
-            '        this._radius = val;'+
-            '    }'+
-            ' })'
-            }
     }
     render(){
         return (
@@ -64,11 +32,47 @@ export default class Es6ClassView extends Component{
                     <h2 id="oldCreateObject" className="two-level-title">
                         旧的创建对象的方式
                     </h2>
-                    <pre >
-                        <code id="oldCreateObjectCode">
+                <Highlight>
+                    {
+                        "function Circle(radius){\n"+
+                        "this.radius = radius;\n"+
+                        "Circle.circlesMade++;\n"+
+                        "}\n"+
 
-                        </code>
-                    </pre>
+                        "//es5的新方法\n"+
+                        "Object.defineProperty(Circle,\"circlesMade\",{\n"+
+                        "get:function(){\n"+
+                        "return this._count?this._count:0;\n"+
+                        "},\n"+
+                        "set:function(count){\n"+
+                        "this._count = count;\n"+
+                        "}\n"+
+                        "})\n"+
+
+                        "Circle.prototype = {\n"+
+                        "square:function(){\n"+
+                        ".....\n"+
+                        "}\n"+
+                        "}\n"+
+
+                        "Object.defineProperty(Circle.prototype,\"radius\" ,{\n"+
+                        "get:function(){\n"+
+                        "return this._radisu;\n"+
+                        "},\n"+
+                        "set:function(val){\n"+
+                        "if(!Number.isInteger(val)){\n"+
+                        "throw Error (`半径只能为整数`)\n"+
+                        "}\n"+
+                        "this._radius = val;\n"+
+                        "}\n"+
+                        "})\n"
+                        }
+                    }
+                    }
+                </Highlight>
+                    <pre><code id="oldCreateObjectCode">
+
+                        </code></pre>
             </div>
         )
     }

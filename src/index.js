@@ -13,7 +13,7 @@ import createLogger from 'redux-logger';
 import thunkMiddleware from 'redux-thunk'
 
 
-
+require('../node_modules/highlight.js/styles/idea.css')
 require("./css/main.less")
 require("./css/iconfont.css")
 
