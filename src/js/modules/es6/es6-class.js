@@ -35,36 +35,36 @@ export default class Es6ClassView extends Component{
                 <Highlight>
                     {
                         "function Circle(radius){\n"+
-                        "this.radius = radius;\n"+
-                        "Circle.circlesMade++;\n"+
+                        "   this.radius = radius;\n"+
+                        "   Circle.circlesMade++;\n"+
                         "}\n"+
 
                         "//es5的新方法\n"+
                         "Object.defineProperty(Circle,\"circlesMade\",{\n"+
-                        "get:function(){\n"+
-                        "return this._count?this._count:0;\n"+
-                        "},\n"+
-                        "set:function(count){\n"+
-                        "this._count = count;\n"+
-                        "}\n"+
+                        "   get:function(){\n"+
+                        "       return this._count?this._count:0;\n"+
+                        "    },\n"+
+                        "   set:function(count){\n"+
+                        "       this._count = count;\n"+
+                        "   }\n"+
                         "})\n"+
 
                         "Circle.prototype = {\n"+
-                        "square:function(){\n"+
-                        ".....\n"+
-                        "}\n"+
+                        "   square:function(){\n"+
+                        "       .....\n"+
+                        "   }\n"+
                         "}\n"+
 
                         "Object.defineProperty(Circle.prototype,\"radius\" ,{\n"+
-                        "get:function(){\n"+
-                        "return this._radisu;\n"+
-                        "},\n"+
-                        "set:function(val){\n"+
-                        "if(!Number.isInteger(val)){\n"+
-                        "throw Error (`半径只能为整数`)\n"+
-                        "}\n"+
-                        "this._radius = val;\n"+
-                        "}\n"+
+                        "   get:function(){\n"+
+                        "       return this._radisu;\n"+
+                        "   },\n"+
+                        "   set:function(val){\n"+
+                        "       if(!Number.isInteger(val)){\n"+
+                        "           throw Error (`半径只能为整数`)\n"+
+                        "       }\n"+
+                        "   this._radius = val;\n"+
+                        "   }\n"+
                         "})\n"
                         }
                     }
