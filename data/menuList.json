@@ -108,8 +108,8 @@
         },
         {
           "id": "5-2",
-          "text": "对象",
-          "path": "/notDevelop",
+          "text": "自定义属性",
+          "path": "/customAttribute",
           "items": []
         },
         {
