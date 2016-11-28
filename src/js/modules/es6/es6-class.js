@@ -70,9 +70,38 @@ export default class Es6ClassView extends Component{
                     }
                     }
                 </Highlight>
-                    <pre><code id="oldCreateObjectCode">
-
-                        </code></pre>
+                <h2 id="newCreateObject" className="two-level-title">
+                    新的创建对象的方式
+                </h2>
+                <Highlight>
+                    {
+                '    class Circle{ \n'+
+                '       constructor(radius){\n'+
+                '            this.radius = radius;\n'+
+                '            Circle.circlesMade++;\n'+
+                '        }\n'+
+                '        static get circlesMade(){\n'+
+                '           return this._count;\n'+
+                '        }\n'+
+                '        static set circlesMade(count){\n'+
+                '             this._count = count;\n'+
+                '        }\n'+
+                '        \n'+
+                '        get radius(){\n'+
+                '            return this._radius;\n'+
+                '        }\n'+
+                '        \n'+
+                '         set radius(radius){\n'+
+                '            this._radius = radius;\n'+
+                '        }\n'+
+                '   \n '+
+                '        square(){\n'+
+                '            .....\n'+
+                '        }\n'+
+                '\n'+
+                '   }\n'
+                    }
+                </Highlight>
             </div>
         )
     }
