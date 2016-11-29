@@ -47,7 +47,7 @@
         {
           "id": "3-1",
           "text": "解构",
-          "path": "/es6",
+          "path": "/es6Destruction",
           "items": []
         },
         {
@@ -128,7 +128,7 @@
         {
           "id": "6-1",
           "text": "解构",
-          "path": "/cssSkillPoint",
+          "path": "/es6Destructuring",
           "items": []
         },
         {

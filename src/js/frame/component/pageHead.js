@@ -18,7 +18,7 @@ export default class PageHead extends Component{
             <div id="pageHead" className="pageHead">
                 <div className="siteInfo">
                     <img className="siteInfo_logo" src={require('../../../imgs/logo.png')}/>
-                    <span className="siteInfo_siteName">the note of snail</span>
+                    <span className="siteInfo_siteName">The big web</span>
                 </div>
                 <div className="siteToolbar">
                     <div className="site_nav">
