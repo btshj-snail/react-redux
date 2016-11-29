@@ -34,42 +34,42 @@ export default class CustomAttribute extends Component{
                 <h2 id="oldCreateObject" className="two-level-title">
                     自定义标签属性
                 </h2>
-                <Highlight>
+                <Highlight className="code_chunk">
                     {
                         '\<div\>\n'+
                         '    \<div id="name" data-user-name="jack"\>\</div\>\n'+
                         '\</div\>\n'
                     }
                 </Highlight>
-                <div>
+                <p className="code_chunk_desc">
                     这里在第二个div标签中，增加了一个叫做data-user-name的自定义属性，并且赋值为jack
-                </div>
+                </p>
                 <h2 id="newCreateObject" className="two-level-title">
                     使用css属性选择器
                 </h2>
-                <Highlight>
+                <Highlight className="code_chunk">
                     {
                        'div[data-user-name="jack"]{\n' +
                        'color:red;\n' +
                        '}\n'
                     }
                 </Highlight>
-                <div>
+                <p className="code_chunk_desc">
                     通过标签选择器和属性选择器，我们就能访问到第二个div，并且将其里面的文本内容字体颜色变为红色。
-                </div>
+                </p>
 
                 <h2 id="newCreateObject" className="two-level-title">
                     使用css属性选择器
                 </h2>
-                <Highlight>
+                <Highlight className="code_chunk">
                     {
                         'let dom = document.getElementById("name");\n'+
                         'dom.dataset.userName = "snail"\n'
                     }
                 </Highlight>
-                <div>
+                <p className="code_chunk_desc">
                     通过id选择器，查找到第二个div，并且将第二个div中的自定义属性值改为snail。
-                </div>
+                </p>
             </div>
         )
     }
