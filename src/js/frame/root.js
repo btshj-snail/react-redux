@@ -15,6 +15,7 @@ import ReactIntroduceView from '../modules/react/react-introduce';
 import ES6View from '../modules/es6/es6';
 import Es6ClassView from '../modules/es6/es6-class';
 import Es6DestructionView from '../modules/es6/es6-destruction';
+import Es6String from '../modules/es6/es6-string';
 import Css3View from '../modules/css3/css3';
 import JsSkillPointView from '../modules/js-skillPoint/js_skillPoint';
 import Krpano from '../modules/krpanpo/krpanoIndex';
@@ -39,6 +40,7 @@ class Root extends Component{
                         <Route path="/es6" component={ES6View} />
                         <Route path="/es6Class" component={Es6ClassView} />
                         <Route path="/es6Destruction" component={Es6DestructionView} />
+                        <Route path="/es6String" component={Es6String} />
                         <Route path="/css3" component={Css3View} />
                         <Route path="/jsSkillPoint" component={JsSkillPointView} />
                         <Route path="/krpano" component={Krpano} />

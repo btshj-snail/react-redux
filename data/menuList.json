@@ -57,6 +57,12 @@
           "items": []
         },
         {
+          "id": "3-4",
+          "text": "字符串",
+          "path": "/es6String",
+          "items": []
+        },
+        {
           "id": "3-3",
           "text": "迭代器",
           "path": "/notDevelop",
