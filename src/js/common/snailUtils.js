@@ -199,4 +199,33 @@ const snailUtils = {
 
 }
 
+
+/**
+ * 涉及系统业务逻辑的公共方法
+ */
+ const snailBusinessUtils = {
+    /**
+     * 将滚动条滚动到指定位置
+     * 点击指定的a标签，滚动条将自动滑动到相对应的元素。
+     * a标签定义自定义属性 data-skip-anchor.例如：<a href='javaScript:void(0)' data-skip-anchor='base' />
+     * 想要滑动到的元素 定义自定义属性 data-anchor . 例如 <div data-anchor='base'>
+     *     这样点击a 标签，滚动条将滑动到对应的div标签位置上。
+     */
+    overflow2ElPosition(){
+            let doms = document.querySelectorAll('a[data-skip-anchor]');
+            for(let dom of doms){
+                dom.onclick = (event)=>{
+                    let anchor = dom.dataset.skipAnchor;
+                    if(!!anchor){
+                        let targetDom =  document.querySelector(`[data-anchor=${anchor}]`);
+                        if(targetDom){
+                            scrollTo(0,targetDom.offsetTop)
+                        }
+                    }
+                }
+            }
+        },
+}
+
 export default snailUtils;
+export {snailBusinessUtils};

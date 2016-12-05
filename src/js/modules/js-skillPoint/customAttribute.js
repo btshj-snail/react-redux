@@ -6,12 +6,17 @@
 import React , {Component} from 'react';
 import Highlight from 'react-highlight';
 
+import snailUtils,{snailBusinessUtils} from '../../common/snailUtils'
+
 export default class CustomAttribute extends Component{
     constructor(props){
         super(props);
         this.state = {};
     }
 
+    componentDidMount(){
+        snailBusinessUtils.overflow2ElPosition();
+    }
 
     render(){
         return (

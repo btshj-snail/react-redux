@@ -5,13 +5,15 @@
 import React,{Component} from 'react';
 import Highlight from 'react-highlight';
 
+import snailUtils,{snailBusinessUtils} from '../../common/snailUtils'
+
 
 export default class Es6ClassView extends Component{
     constructor(props){
         super(props);
     }
     componentDidMount(){
-
+        snailBusinessUtils.overflow2ElPosition();
     }
     render(){
         return (
@@ -24,12 +26,11 @@ export default class Es6ClassView extends Component{
                     </div>
 
                     <ul className="snail_content_nav">
-                        <li className="snail_content_nav_item"><a href="#oldCreateObject">旧的创建对象的方式</a></li>
-                        <li className="snail_content_nav_item"><a href="#">新的创建对象的方式</a></li>
-                        <li className="snail_content_nav_item"><a href="#">目前面临的问题</a></li>
+                        <li className="snail_content_nav_item"><a href="javaScript:void(0)" data-skip-anchor="createObjectByOldMethod">旧的创建对象的方式</a></li>
+                        <li className="snail_content_nav_item"><a href="javaScript:void(0)" data-skip-anchor="createObjectByNewMethod">新的创建对象的方式</a></li>
                     </ul>
 
-                    <h2 id="oldCreateObject" className="two-level-title">
+                    <h2 data-anchor="createObjectByOldMethod" className="two-level-title">
                         旧的创建对象的方式
                     </h2>
                 <Highlight>
@@ -70,7 +71,7 @@ export default class Es6ClassView extends Component{
                     }
                     }
                 </Highlight>
-                <h2 id="newCreateObject" className="two-level-title">
+                <h2 data-anchor="createObjectByNewMethod" className="two-level-title">
                     新的创建对象的方式
                 </h2>
                 <Highlight>

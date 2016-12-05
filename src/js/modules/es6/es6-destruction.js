@@ -5,22 +5,12 @@
 import React , {Component} from 'react';
 import Highlight from 'react-highlight';
 
+import snailUtils,{snailBusinessUtils} from '../../common/snailUtils';
+
 export default class Es6DestructionView extends Component{
 
     componentDidMount(){
-        let doms = document.querySelectorAll('a[data-skip-anchor]');
-        for(let dom of doms){
-            dom.onclick = (event)=>{
-                let anchor = dom.dataset.skipAnchor;
-                if(!!anchor){
-                   let targetDom =  document.querySelector(`[data-anchor=${anchor}]`);
-                    if(targetDom){
-                       window.scrollTo(0,200)
-                    }
-                }
-            }
-        }
-
+        snailBusinessUtils.overflow2ElPosition();
     }
 
 
@@ -38,8 +28,8 @@ export default class Es6DestructionView extends Component{
 
                 <ul className="snail_content_nav">
                     <li className="snail_content_nav_item"><a href="javaScript:void(0)" data-skip-anchor="baseUse">基本用法</a></li>
-                    <li className="snail_content_nav_item"><a href="#">使用css属性选择器</a></li>
-                    <li className="snail_content_nav_item"><a href="#">目前面临的问题</a></li>
+                    <li className="snail_content_nav_item"><a href="javaScript:void(0)" data-skip-anchor="cssAttributeChose">使用css属性选择器</a></li>
+                    <li className="snail_content_nav_item"><a href="javaScript:void(0)" data-skip-anchor="nowQuestion">目前面临的问题</a></li>
                 </ul>
 
                 <h2 data-anchor="baseUse" className="two-level-title">
@@ -55,7 +45,7 @@ export default class Es6DestructionView extends Component{
                 <p className="code_chunk_desc">
                     本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。
                 </p>
-                <h2 id="newCreateObject" className="two-level-title">
+                <h2 data-anchor="cssAttributeChose" className="two-level-title">
                     使用css属性选择器
                 </h2>
                 <Highlight className="code_chunk">
@@ -69,7 +59,7 @@ export default class Es6DestructionView extends Component{
                     通过标签选择器和属性选择器，我们就能访问到第二个div，并且将其里面的文本内容字体颜色变为红色。
                 </p>
 
-                <h2 data-anchor="baseUse1" id="newCreateObject" className="two-level-title">
+                <h2 data-anchor="nowQuestion"  className="two-level-title">
                     使用css属性选择器
                 </h2>
                 <Highlight className="code_chunk">
