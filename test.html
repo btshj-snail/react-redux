@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+   let map = new Map();
+    map.set("a","a");
+    map.set("b","a1");
+    map.set("c","a2");
+    console.log(Array.from(map))
+
+    let set = new Set();
+    set.add("a");
+    set.add("a1");
+    set.add("a2");
+    console.log(Array.from(set))
+
+    let ary = ["a","b","c"]
+    let newAry = Array.from(ary);
+    console.log(newAry); //["a","b","c"]
+    console.log(newAry===ary); //false
+
+   //按照相应的规则生成新的数组
+   let ary1 = [1,2,3,4,5,6]
+    let newAry1 = Array.from(ary1,(item)=>{
+        if(item>5){
+            return true;
+        }
+        return false;
+    })
+    console.log(newAry1)
+
+
+
+    let a = [{name:"jack",age:11},{name:"tom",age:13},{name:"lucy",age:15}]
+    let obj = a.find((item,index,arr)=>{
+        if(item.name=="tom1"){
+            return true;
+        }
+    });
+    console.log(obj);
+
+    let b = new Array(4);
+    console.log(b);
+    b.fill("d")
+    console.log(b);
+</script>
+</body>
+</html>

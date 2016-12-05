@@ -63,6 +63,12 @@
           "items": []
         },
         {
+          "id": "3-5",
+          "text": "数组",
+          "path": "/es6Array",
+          "items": []
+        },
+        {
           "id": "3-3",
           "text": "迭代器",
           "path": "/notDevelop",
