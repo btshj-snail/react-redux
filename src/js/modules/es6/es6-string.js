@@ -3,15 +3,20 @@
  */
 
 
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import Highlight from 'react-highlight';
+import snailUtils, {snailBusinessUtils} from '../../common/snailUtils';
 
-export default class Es6String extends Component{
-        constructor(props){
-            super(props);
-        }
+export default class Es6String extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-    render(){
+    componentDidMount() {
+        snailBusinessUtils.overflow2ElPosition();
+    }
+
+    render() {
         return (
             <div>
                 <h1 className="colorLight sub_container_head">ES6-字符串</h1>
@@ -27,7 +32,8 @@ export default class Es6String extends Component{
                         <a href="javaScript:void(0)" data-skip-anchor="codePointAt">codePointAt() </a>
                     </li>
                     <li className="snail_content_nav_item">
-                        <a href="javaScript:void(0)" data-skip-anchor="includesAndStartsWithAndEndsWith">includes(), startsWith(), endsWith() </a>
+                        <a href="javaScript:void(0)" data-skip-anchor="includesAndStartsWithAndEndsWith">includes(),
+                            startsWith(), endsWith() </a>
                     </li>
                     <li className="snail_content_nav_item">
                         <a href="javaScript:void(0)" data-skip-anchor="repeatFunction">repeat() </a>
@@ -149,8 +155,8 @@ export default class Es6String extends Component{
                     'abc'.padStart(10, '0123456789')<br/>
                     // '0123456abc'<br/>
 
-                    'x'.padStart(4) // '   x'<br/>
-                    'x'.padEnd(4) // 'x   '<br/>
+                    'x'.padStart(4) // ' x'<br/>
+                    'x'.padEnd(4) // 'x '<br/>
                 </Highlight>
                 <p className="code_chunk_desc">
                     上面代码中，padStart和padEnd一共接受两个参数，第一个参数用来指定字符串的最小长度，第二个参数是用来补全的字符串。
