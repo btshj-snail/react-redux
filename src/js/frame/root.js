@@ -19,6 +19,7 @@ import Es6String from '../modules/es6/es6-string';
 import Es6Array from '../modules/es6/es6-array';
 import Css3View from '../modules/css3/css3';
 import JsSkillPointView from '../modules/js-skillPoint/js_skillPoint';
+import Compatibility from '../modules/js-skillPoint/compatibility';
 import Krpano from '../modules/krpanpo/krpanoIndex';
 import CustomAttribute from '../modules/js-skillPoint/customAttribute';
 import CssSkillPointView from '../modules/css-skillPoint/css_skillPoint';
@@ -45,6 +46,7 @@ class Root extends Component{
                         <Route path="/es6Array" component={Es6Array} />
                         <Route path="/css3" component={Css3View} />
                         <Route path="/jsSkillPoint" component={JsSkillPointView} />
+                        <Route path="/compatibility" component={Compatibility} />
                         <Route path="/krpano" component={Krpano} />
                         <Route path="/customAttribute" component={CustomAttribute} />
                         <Route path="/cssSkillPoint" component={CssSkillPointView} />

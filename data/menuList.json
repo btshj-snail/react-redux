@@ -129,6 +129,12 @@
           "text": "迭代器",
           "path": "/notDevelop",
           "items": []
+        },
+        {
+          "id": "5-5",
+          "text": "js兼容性",
+          "path": "/compatibility",
+          "items": []
         }
       ]
     },
