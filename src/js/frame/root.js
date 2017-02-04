@@ -22,6 +22,7 @@ import JsSkillPointView from '../modules/js-skillPoint/js_skillPoint';
 import Compatibility from '../modules/js-skillPoint/compatibility';
 import Krpano from '../modules/krpanpo/krpanoIndex';
 import CustomAttribute from '../modules/js-skillPoint/customAttribute';
+import FrequencyShow from '../modules/js-skillPoint/frequencyShow';
 import CssSkillPointView from '../modules/css-skillPoint/css_skillPoint';
 import IntroduceView from '../modules/siteIntroduce/introduce';
 
@@ -49,7 +50,9 @@ class Root extends Component{
                         <Route path="/compatibility" component={Compatibility} />
                         <Route path="/krpano" component={Krpano} />
                         <Route path="/customAttribute" component={CustomAttribute} />
+                        <Route path="/frequencyShow" component={FrequencyShow} />
                         <Route path="/cssSkillPoint" component={CssSkillPointView} />
+
                     </Route>
                 </Router>
             </Provider>
