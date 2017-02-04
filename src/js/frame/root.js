@@ -17,6 +17,7 @@ import Es6ClassView from '../modules/es6/es6-class';
 import Es6DestructionView from '../modules/es6/es6-destruction';
 import Es6String from '../modules/es6/es6-string';
 import Es6Array from '../modules/es6/es6-array';
+import Es6Object from '../modules/es6/es6-object';
 import Css3View from '../modules/css3/css3';
 import JsSkillPointView from '../modules/js-skillPoint/js_skillPoint';
 import Compatibility from '../modules/js-skillPoint/compatibility';
@@ -45,6 +46,7 @@ class Root extends Component{
                         <Route path="/es6Destruction" component={Es6DestructionView} />
                         <Route path="/es6String" component={Es6String} />
                         <Route path="/es6Array" component={Es6Array} />
+                        <Route path="/es6Object" component={Es6Object} />
                         <Route path="/css3" component={Css3View} />
                         <Route path="/jsSkillPoint" component={JsSkillPointView} />
                         <Route path="/compatibility" component={Compatibility} />

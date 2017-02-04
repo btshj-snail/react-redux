@@ -69,6 +69,12 @@
           "items": []
         },
         {
+          "id": "3-6",
+          "text": "对象",
+          "path": "/es6Object",
+          "items": []
+        },
+        {
           "id": "3-3",
           "text": "迭代器",
           "path": "/notDevelop",
